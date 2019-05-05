@@ -1,0 +1,8 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "removeComments": true,
+    "outFile": "app.js",
+    "sourceMap": true
+  }
+}

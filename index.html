@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./main.css">
+
+  <title>Kcal counter</title>
+</head>
+
+<body>
+    <div class="form-group">
+        <h1>Kcal counter with TypeScript</h1>
+        </br>
+        <div class="row">
+            <div class="col-xs-4">
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+                    <input type="text" class="form-control" placeholder="Product Name" id="productName">
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-tag"></span></span>
+                    <input type="text" class="form-control" placeholder="Brand name" id="productDescription">
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-tag"></span></span>
+                    <input type="number" class="form-control" placeholder="200" id="productKcal">
+                </div>
+            </div>
+        </div>
+        </br>
+        <input type="button" id="add" value="Add new Product" class="btn btn btn-primary" />
+    </div>
+
+    </br>
+
+    <h2 class="productTitle text-center">Current Products<span></span></h2>
+    <h2 class="productKcal text-center">Current Kcal<span></span></h2>
+    <div id="productList"></div>
+    
+    <script src="app.js"></script>
+</body>
+
+</html>
