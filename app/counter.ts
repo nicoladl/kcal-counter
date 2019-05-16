@@ -26,10 +26,8 @@ class ProductList{
   }
 
   sumKcal():number{
-    for(let index=0; index < ProductList.allProducts.length;index++) {
-      this.totalKcal += ProductList.allProducts[index].kcal
-    }
-    return this.totalKcal;
+    let selectedProduct = ProductList.allProducts.map(item => this.totalKcal += item.kcal)
+    return this.totalKcal
   }
 }
 
@@ -57,17 +55,16 @@ function toAllproduct(task:string, brand:string, kcal:number){
   let div = <HTMLDivElement>document.getElementById("productList");
   let list="<ul>";
 
-  for(let index=0; index < ProductList.allProducts.length;index++){
-      list = list + " <li> " + ProductList.allProducts[index].name + ' ' + ProductList.allProducts[index].brand + ' ' + ProductList.allProducts[index].kcal;
-  }
+  ProductList.allProducts.forEach((item, index) => {
+    list = list + " <li> " + ProductList.allProducts[index].name + ' ' + ProductList.allProducts[index].brand + ' ' + ProductList.allProducts[index].kcal;
+  })
+
   list += "</li>"
   div.innerHTML = list;
 
   //Casting
   (<HTMLInputElement>document.getElementById("productName")).value = "";
-
   (<HTMLInputElement>document.getElementById("productDescription")).value = "";
-
   (<HTMLInputElement>document.getElementById("productKcal")).value = "";
   
 }
